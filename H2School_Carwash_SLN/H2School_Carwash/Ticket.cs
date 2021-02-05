@@ -6,13 +6,14 @@ namespace H2School_ParkingSystem
 {
     public class Ticket
     {
-        private Vehicle Vehicle { get; set; }
+        public Vehicle Vehicle { get; set; }
 
-        private DateTime ParkTime { get; set; }
+        public DateTime ParkTime { get; set; }
 
         public Ticket(Vehicle v)
         {
             this.Vehicle = v;
+            this.ParkTime = DateTime.Now;
         }
     }
 }
