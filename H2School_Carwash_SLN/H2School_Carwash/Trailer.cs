@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace H2School_Carwash
+namespace H2School_ParkingSystem
 {
     public class Trailer : Vehicle
     {

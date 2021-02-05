@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H2School_Carwash", "H2School_Carwash\H2School_Carwash.csproj", "{67ADADE7-092E-46E0-B742-138BED9A45B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H2School_ParkingSystem", "H2School_Carwash\H2School_ParkingSystem.csproj", "{67ADADE7-092E-46E0-B742-138BED9A45B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
