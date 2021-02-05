@@ -92,10 +92,14 @@ namespace H2School_ParkingSystem
             return new Ticket(vehicle);
         }
 
+        /// <summary>
+        /// This is where we Check out our Vehicle and return the Price * Hours.
+        /// </summary>
+        /// <param name="ticket"></param>
+        /// <returns></returns>
         public decimal CheckOut(Ticket ticket)
         {
-            /// TODO: throw exception if vehicleType is not checked in
-            /// TODO: calculate price + returning it.
+            return ticket.Vehicle.GetPrice() * (decimal)(DateTime.Now - ticket.ParkTime).TotalHours;
         }
     }
 }
