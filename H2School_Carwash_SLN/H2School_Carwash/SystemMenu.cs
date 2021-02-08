@@ -72,7 +72,8 @@ namespace H2School_ParkingSystem
             }
             #endregion
 
-            if (ticket == null)
+            // If there isn't any available lots, tell the customer that, otherwise Check In success.
+            if (ticket == null)   
             {
                 Console.WriteLine("There wasn't any available parking lots.\nCome back again later.");
             }
@@ -123,6 +124,7 @@ namespace H2School_ParkingSystem
             }
             #endregion
 
+            // Tells how many avialable lots there's left of the Type vehicle that customer chooses in the Menu.
             Console.WriteLine("---------------------------------------");
             Console.WriteLine($"There are {freeLots} available lots.");
         }
@@ -137,9 +139,9 @@ namespace H2School_ParkingSystem
             
             Console.WriteLine("---------------------------------");
             Console.WriteLine("Enter your ticket number:");
-            ticketNumber = Console.ReadLine();
+            ticketNumber = Console.ReadLine();                              // Customer types in the Ticket ID.
 
-            decimal price = parking.CheckOut(ticketNumber);
+            decimal price = parking.CheckOut(ticketNumber);                
 
             Console.WriteLine("---------------------------------");
             Console.WriteLine($"  Your price will be: ${Decimal.Round(price, 2)}.");

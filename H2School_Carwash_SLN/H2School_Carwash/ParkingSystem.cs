@@ -125,6 +125,7 @@ namespace H2School_ParkingSystem
                     ticket = item;
                 }
             }
+            // If the Ticket Number doesn't exists, it throws an Exception.
             if (ticket == null)
             {
                 throw new Exception("Something went wrong. Your Ticket Number doesn't exist.");
