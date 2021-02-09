@@ -10,11 +10,12 @@ namespace H2School_ParkingSystem
         {
             string menuSelect = "";
 
+            Console.Clear();
             Console.WriteLine("---------------------------------");
             Console.WriteLine("  What can we do for you today?");
             Console.WriteLine("---------------------------------");
             Console.WriteLine("1. Check in your vehicle.\n2. Check for Lots available.\n3. Check out your vehicle.");
-            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("---------------------------------");
             Console.WriteLine("Enter your Selection:");
             menuSelect = Console.ReadLine();
 
@@ -79,9 +80,12 @@ namespace H2School_ParkingSystem
             }
             else
             {
-                Console.WriteLine("---------------------------------------");
+                Console.WriteLine("---------------------------------------------");
                 Console.WriteLine($"Check in succesful.");
             }
+            Console.WriteLine("---------------------------------------------");
+            Console.WriteLine("Press Enter to return to Main Menu...");
+            Console.ReadLine();
         }
 
         /// <summary>
@@ -125,8 +129,11 @@ namespace H2School_ParkingSystem
             #endregion
 
             // Tells how many avialable lots there's left of the Type vehicle that customer chooses in the Menu.
-            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("--------------------------------------------------");
             Console.WriteLine($"There are {freeLots} available lots.");
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Press Enter to return to Main Menu...");
+            Console.ReadLine();
         }
 
         /// <summary>
@@ -136,17 +143,20 @@ namespace H2School_ParkingSystem
         public static void CheckOutMenu(ParkingSystem parking)
         {
             string ticketNumber = "";
-            
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("Enter your ticket number:");
+
+            Console.Clear();
+            Console.WriteLine("---------------------------------------");
+            Console.Write("Enter your ticket number to Check Out: ");
             ticketNumber = Console.ReadLine();                              // Customer types in the Ticket ID.
 
             decimal price = parking.CheckOut(ticketNumber);                
 
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine($"  Your price will be: ${Decimal.Round(price, 2)}.");
-            Console.WriteLine("---------------------------------");
-            Console.WriteLine("    Thank you for visiting!");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine($"      Your price will be: ${Decimal.Round(price, 2)}.");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("       Thank you for visiting!         ");
+            Console.WriteLine("---------------------------------------");
+            Console.ReadLine();
         }
     }
 }
