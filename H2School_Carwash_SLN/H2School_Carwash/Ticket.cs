@@ -19,6 +19,10 @@ namespace H2School_ParkingSystem
             this.TicketId = GetNextId();
         }
 
+        /// <summary>
+        /// This is where we're giving the Tickets their own IDs.
+        /// </summary>
+        /// <returns></returns>
         private static string GetNextId()
         {
             return (++Id).ToString();
